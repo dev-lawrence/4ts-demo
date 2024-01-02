@@ -24,13 +24,25 @@
   }
 
   .logo {
-    font-size: $fs-600;
+    font-size: $fs-700;
     font-weight: 700;
     color: var(--clr-neutral-100);
+
+    @include large {
+      font-size: $fs-700 + 0.3;
+    }
   }
 
   .showLogo {
     color: var(--clr-primary-400);
+  }
+
+  .showCta {
+    color: var(--clr-neutral-900);
+
+    &:hover {
+      color: var(--clr-neutral-100);
+    }
   }
 
   .container {
@@ -64,7 +76,7 @@
       }
 
       .icon {
-        font-size: $fs-600 + 0.2;
+        font-size: $fs-650;
         color: var(--clr-neutral-100);
 
         @include large {
@@ -76,18 +88,12 @@
         color: var(--clr-neutral-900);
       }
 
-      .icon-close,
-      .icon-bar {
-        font-size: $fs-700;
-      }
-
       .icon-close {
         color: var(--clr-neutral-900);
       }
     }
 
-    .toggle-menu,
-    .toggle-account {
+    .toggle-menu {
       display: grid;
     }
 
@@ -95,6 +101,10 @@
       .toggle-menu {
         display: none;
       }
+    }
+
+    .buttons {
+      @include flex(center, flex-start);
     }
 
     .cta {

@@ -1,0 +1,40 @@
+@use '../abstracts' as *;
+
+.features-section {
+  .feature {
+    background-color: var(--clr-neutral-100);
+    padding: 1rem;
+    text-align: center;
+    border-radius: $radius-300;
+
+    &:not(:last-child) {
+      margin-bottom: 2rem;
+
+      @include medium {
+        margin-bottom: 0;
+      }
+    }
+
+    img {
+      width: 60px;
+      margin-inline: auto;
+      margin-bottom: 1rem;
+    }
+
+    &-title {
+      font-size: $fs-600;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+  }
+
+  //MEDIA QUERY
+  @include medium {
+    .features {
+      @include grid(
+        repeat(auto-fit, minmax(250px, 1fr)),
+        map-get($gap-map, 'gap-1')
+      );
+    }
+  }
+}

@@ -4,11 +4,7 @@
   position: relative;
 
   .hero {
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
-    min-height: 100dvh;
-    @include flex(center, center);
+    z-index: 1;
 
     .overlay {
       position: absolute;
@@ -19,46 +15,53 @@
       height: 100%;
     }
 
-    .carousel-container {
-      height: 100vh;
-      width: 100%;
+    .content {
+      max-width: 800px;
+      margin-inline: auto;
+      padding-top: 12rem;
+      color: var(--clr-neutral-100);
+      text-align: center;
 
-      img {
-        height: 100vh;
-        width: 100%;
-        object-fit: cover;
+      @include large {
+        text-align: left;
+        margin-inline: unset;
+        margin-right: auto;
+        padding-top: 15rem;
       }
 
-      .content {
-        position: absolute;
-        padding-inline: 1rem;
-        top: 50%;
-        left: 50%;
-        width: 100%;
-        text-align: center;
-        @include flex(center, center);
-        flex-direction: column;
-        transform: translate(-50%, -50%);
-        color: var(--clr-neutral-100);
+      h1 {
+        font-size: $fs-800 + 0.6;
+        line-height: 1.2;
+        margin-bottom: 0.5rem;
 
-        h1 {
-          font-size: $fs-800;
-          max-width: 800px;
-          line-height: 1.2;
-          margin-bottom: 0.5rem;
-
-          @include extra-small {
-            font-size: $fs-700;
-          }
-
-          @include extra-large {
-            font-size: 3.8rem;
-          }
+        @include small {
+          font-size: $fs-700;
         }
 
-        p {
-          margin-bottom: 1rem;
-          max-width: 500px;
+        @include large {
+          font-size: 4rem;
+        }
+      }
+
+      p {
+        margin-bottom: 1rem;
+        max-width: 600px;
+        margin-inline: auto;
+        font-size: $fs-400;
+
+        @include large {
+          margin-inline: unset;
+          margin-right: auto;
+          font-size: $fs-500;
+        }
+      }
+
+      .buttons {
+        margin-top: 1rem;
+        @include flex(center, center);
+
+        @include large {
+          justify-content: flex-start;
         }
       }
     }

@@ -1,29 +1,11 @@
 @use '../abstracts' as *;
 
-.rooms-page {
-  .bg-img {
-    background: var(--clr-neutral-900) url(../assets/imgs/rooms.webp);
-    @include image-property(initial);
-  }
-}
-
-.about {
-  .bg-img {
-    background: var(--clr-neutral-900) url(../assets/imgs/about-bg.webp);
-    @include image-property(initial);
-  }
-}
-
-.blogs {
-  .bg-img {
-    background: var(--clr-neutral-900) url(../assets/imgs/blog-bg.webp);
-    @include image-property(initial);
-  }
-}
-
-.contact {
-  .bg-img {
-    background: var(--clr-neutral-900) url(../assets/imgs/hero-bg1.webp);
-    @include image-property(initial);
-  }
+.hero {
+  position: relative;
+  background: var(--clr-neutral-900) url(../assets/hero-bg.jpg);
+  @include image-property(initial);
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100dvh;
+  @include flex(center, center);
 }
