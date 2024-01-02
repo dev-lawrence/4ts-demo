@@ -4,7 +4,7 @@ import Card from './Card';
 const Services = () => {
   return (
     <>
-      <section className="services-section pt-section">
+      <section id="service" className="services-section pt-section">
         <div className="title">
           <h2>Our Services</h2>
         </div>

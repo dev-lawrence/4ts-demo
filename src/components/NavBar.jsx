@@ -6,6 +6,17 @@ const Navbar = ({ navClick, handleNavClose, scrolling, isRoomDetailsPage }) => {
     window.scrollTo(0, 0);
   };
 
+  const smoothScrollTo = (targetId) => {
+    const targetElement = document.getElementById(targetId);
+
+    if (targetElement) {
+      window.scrollTo({
+        top: targetElement.offsetTop - 70,
+        behavior: 'smooth',
+      });
+    }
+  };
+
   return (
     <>
       <nav className={`nav ${navClick ? 'showMenu' : ''}`}>
@@ -25,21 +36,51 @@ const Navbar = ({ navClick, handleNavClose, scrolling, isRoomDetailsPage }) => {
           </li>
 
           <li>
-            <NavLink to="rooms" onClick={handleNavLinkClick}>
+            <a
+              href="#about"
+              onClick={() => {
+                handleNavClose();
+                smoothScrollTo('about');
+              }}
+            >
               About
-            </NavLink>
+            </a>
           </li>
 
           <li>
-            <NavLink to="about" onClick={handleNavLinkClick}>
-              Service
-            </NavLink>
+            <a
+              href="#features"
+              onClick={() => {
+                handleNavClose();
+                smoothScrollTo('features');
+              }}
+            >
+              features
+            </a>
           </li>
 
           <li>
-            <NavLink to="contact" onClick={handleNavLinkClick}>
-              Contact
-            </NavLink>
+            <a
+              href="#service"
+              onClick={() => {
+                handleNavClose();
+                smoothScrollTo('service');
+              }}
+            >
+              service
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="#footer-section"
+              onClick={() => {
+                handleNavClose();
+                smoothScrollTo('footer-section');
+              }}
+            >
+              contact
+            </a>
           </li>
 
           <div className="buttons">

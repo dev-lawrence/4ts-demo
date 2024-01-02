@@ -4,7 +4,7 @@ import Card from './Card';
 const Features = () => {
   return (
     <>
-      <section className="features-section pt-section">
+      <section id="features" className="features-section pt-section">
         <div className="title">
           <h2>Why choose us?</h2>
           <p>Amazing features that makes 4T5 stand out from other vendors</p>
