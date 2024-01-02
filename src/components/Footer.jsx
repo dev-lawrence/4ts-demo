@@ -77,7 +77,7 @@ const Footer = () => {
               </div>
 
               <div className="flex">
-                <i className="fa-solid fa-envelope"></i> <p>4T5 NG</p>
+                <i className="fa-solid fa-envelope"></i>
                 <p>info.4t5ng@gmail.com</p>
               </div>
 
