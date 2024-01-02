@@ -1,0 +1,16 @@
+@use '../abstracts' as *;
+
+.not-found {
+  text-align: center;
+  padding-top: 7rem;
+
+  .btn {
+    border-radius: $radius-400;
+  }
+
+  img {
+    width: 100%;
+    max-width: 600px;
+    margin-inline: auto;
+  }
+}

@@ -1,0 +1,108 @@
+@use '../abstracts' as *;
+
+.booking {
+  &-img {
+    display: none;
+
+    @include large {
+      display: block;
+      height: 100%;
+
+      img {
+        height: 100%;
+        object-fit: cover;
+        border-radius: $radius-sm;
+      }
+    }
+  }
+
+  .form {
+    background-color: var(--clr-neutral-100);
+    padding: 2rem 1rem;
+    border-radius: $radius-sm;
+
+    @include medium {
+      padding-inline: 2rem;
+    }
+  }
+
+  label {
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+  }
+
+  .row:not(:last-child) {
+    margin-bottom: 1rem;
+
+    @include medium {
+      margin-bottom: 0;
+    }
+  }
+
+  input,
+  textarea,
+  select {
+    padding-inline: 0.75rem;
+    height: 42px;
+    width: 100%;
+    background-color: var(--clr-neutral-100);
+    border: 1px solid #ccc;
+    font-family: inherit;
+    border-radius: 0.3rem;
+  }
+
+  .rooms-option {
+    width: 100%;
+
+    .room-option {
+      position: relative;
+    }
+
+    select {
+      appearance: none;
+    }
+
+    .arrow {
+      position: absolute;
+      right: 0.3rem;
+      top: 50%;
+      transform: translateY(-50%);
+      pointer-events: none;
+    }
+  }
+
+  .cta {
+    width: 100%;
+    margin-top: 2rem;
+  }
+
+  // Available Rooms
+  .available-rooms {
+    animation: moveUpDown 1s ease-in-out;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes moveUpDown {
+    0% {
+      transform: translateY(-6rem);
+    }
+
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  // Breakpoints
+  @include large {
+    .d-grid {
+      @include grid(repeat(2, 1fr), 0);
+      column-gap: 2rem;
+    }
+  }
+
+  @include medium {
+    .grid {
+      @include grid(repeat(2, 1fr), 1rem);
+    }
+  }
+}

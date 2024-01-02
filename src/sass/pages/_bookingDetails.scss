@@ -1,0 +1,127 @@
+@use '../abstracts' as *;
+
+.booking-details-page {
+  padding-top: 7rem;
+  max-width: 900px;
+  margin-inline: auto;
+
+  .room-title {
+    text-align: center;
+    padding-block-start: 3rem;
+  }
+
+  h3 {
+    font-size: $fs-600;
+    text-transform: capitalize;
+    margin-bottom: 1rem;
+
+    @include medium {
+      font-size: $fs-650;
+    }
+  }
+
+  img {
+    border-radius: $radius-sm;
+    margin-bottom: 1.5rem;
+
+    @include medium {
+      aspect-ratio: 1/0.5;
+      object-fit: cover;
+      margin-bottom: 3rem;
+    }
+  }
+
+  span {
+    font-weight: 600;
+  }
+
+  .icon {
+    color: var(--clr-primary-400);
+  }
+
+  .details {
+    h4 {
+      font-size: $fs-450;
+
+      @include medium {
+        font-size: $fs-600;
+      }
+    }
+
+    .info {
+      margin-bottom: 3rem;
+    }
+
+    .id {
+      margin-top: 1rem;
+      font-weight: 600;
+      color: var(--clr-primary-400);
+      margin-bottom: 1rem;
+    }
+
+    .info-flex {
+      @include flex(center, flex-start);
+      flex-wrap: wrap;
+      gap: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .date {
+      gap: 1rem;
+
+      p {
+        font-weight: 600;
+        margin-bottom: 0.3rem;
+      }
+
+      span {
+        display: inline-flex;
+      }
+    }
+
+    .room-type {
+      p {
+        text-transform: capitalize;
+      }
+    }
+
+    .night {
+      display: inline-flex;
+      margin-left: 1rem;
+    }
+
+    .children {
+      margin-left: 4rem;
+    }
+
+    .adults,
+    .children {
+      .flex {
+        @include flex(center, flex-start);
+        margin-top: 0.2rem;
+      }
+
+      .icon {
+        display: inline-flex;
+        margin-right: 0.5rem;
+      }
+    }
+
+    .price {
+      margin-top: 1em;
+      font-weight: 600;
+      font-size: $fs-450;
+    }
+  }
+}
+
+// Breakpoints
+@include medium {
+  .details-grid {
+    @include grid(repeat(2, 1fr), 1rem);
+  }
+
+  .review {
+    justify-self: flex-end;
+  }
+}

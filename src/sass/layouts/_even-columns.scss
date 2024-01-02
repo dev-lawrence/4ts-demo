@@ -1,0 +1,21 @@
+@use '../abstracts' as *;
+
+.flex-column {
+  @include flex(center, space-between);
+}
+
+.grid-even {
+  @include grid(repeat(2, 1fr), 1rem);
+
+  @include medium {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.grid-flow {
+  @include grid(
+    repeat(auto-fit, minmax(250px, 1fr)),
+    map-get($gap-map, 'gap-6')
+  );
+  column-gap: map-get($gap-map, 'gap-2');
+}

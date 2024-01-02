@@ -1,0 +1,157 @@
+@use '../abstracts' as *;
+
+// Review
+.reviews {
+  .review-title {
+    margin-bottom: 1.5rem;
+  }
+
+  .rating {
+    margin-bottom: 1rem;
+  }
+
+  h5 {
+    font-size: $fs-400;
+    margin-bottom: 0.5rem;
+  }
+
+  .form {
+    input,
+    textarea {
+      padding: 0.7rem;
+      width: 100%;
+      border-radius: $radius-sm;
+      padding-left: 0.5rem;
+      border: 1.5px solid var(--clr-neutral-900);
+      background-color: var(--clr-neutral-300);
+      color: var(--clr-neutral-900);
+      font-family: inherit;
+    }
+
+    &-btn {
+      width: 100%;
+      margin-top: 1.5rem;
+    }
+  }
+
+  small {
+    color: var(--clr-neutral-900);
+    font-style: italic;
+  }
+
+  .star {
+    color: #f5c136;
+  }
+
+  .close-icon {
+    cursor: pointer;
+    font-size: $fs-700;
+    color: var(--clr-neutral-100);
+    background-color: var(--clr-neutral-900);
+    border-radius: $radius-400;
+    padding: 0.2rem;
+    position: absolute;
+    right: 1.3rem;
+    top: 4rem;
+  }
+
+  //  Submission form
+  .submission-form {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    max-width: 450px;
+    z-index: 1000;
+    transform: translate(-50%, -50%);
+    padding-block: 3rem;
+
+    .submission-message {
+      @include flex(center, center);
+      flex-direction: column;
+      height: 100%;
+      text-align: center;
+      padding: 3rem 1.5rem 2rem;
+      margin-inline: 0.5rem;
+      background-color: var(--clr-neutral-100);
+      border-radius: $radius-300;
+
+      p {
+        font-weight: 400;
+        font-size: $fs-400;
+        margin-bottom: 2rem;
+      }
+
+      img {
+        width: 50px;
+        margin-bottom: 1rem;
+      }
+
+      .btn {
+        width: 100%;
+        border-radius: $radius-400;
+      }
+    }
+  }
+}
+
+// Overlay
+.review-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba($color: #000000, $alpha: 0.6);
+  width: 100%;
+  height: 100vh;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 0.2s ease-in-out;
+
+  &.show {
+    opacity: 1;
+    z-index: 800;
+    transition: opacity 0.2s ease-in-out;
+  }
+}
+
+// Customers Review
+.customer-reviews {
+  .review-title {
+    margin-bottom: 0;
+  }
+
+  .review {
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+
+    &-output-text {
+      font-weight: 500;
+      margin-left: 0.5rem;
+
+      @include small {
+        margin-bottom: 1rem;
+        margin-left: 0;
+      }
+    }
+
+    &-flex {
+      @include flex(center, flex-start);
+      flex-wrap: wrap;
+      margin-bottom: 0.5rem;
+    }
+
+    .user-name {
+      margin-left: 0.5rem;
+      transform: translateY(-0.2rem);
+      color: var(--clr-neutral-900);
+
+      @include small {
+        margin-left: 0;
+      }
+    }
+  }
+}
