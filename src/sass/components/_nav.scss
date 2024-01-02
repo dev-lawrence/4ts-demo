@@ -75,6 +75,7 @@
 
     @include large {
       color: var(--clr-neutral-100);
+      font-size: $fs-300;
     }
 
     &:hover {

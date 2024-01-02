@@ -1,5 +1,6 @@
 import About from '../components/About';
 import Features from '../components/Features';
+import Services from '../components/Services';
 
 const Home = () => {
   return (
@@ -30,6 +31,9 @@ const Home = () => {
 
           {/* Features */}
           <Features />
+
+          {/* Services */}
+          <Services />
         </div>
       </section>
     </>

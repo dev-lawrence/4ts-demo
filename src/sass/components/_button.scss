@@ -8,10 +8,6 @@
   border-radius: 0.6rem;
   font-weight: 600;
   text-transform: capitalize;
-
-  @include large {
-    font-size: $fs-400;
-  }
 }
 
 .btn-outline {
@@ -29,10 +25,6 @@
     background-color: var(--clr-primary-400);
     border-color: transparent;
     color: var(--clr-neutral-100);
-  }
-
-  @include large {
-    font-size: $fs-400;
   }
 }
 

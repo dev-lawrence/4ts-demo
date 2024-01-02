@@ -1,5 +1,5 @@
 import { features } from './FeatureData';
-import FeatureCard from './FeatureCard';
+import Card from './Card';
 
 const Features = () => {
   return (
@@ -11,8 +11,15 @@ const Features = () => {
         </div>
 
         <div className="features">
-          {features.map((feature) => {
-            return <FeatureCard feature={feature} key={feature.id} />;
+          {features.map((feature, index) => {
+            return (
+              <Card
+                data={feature}
+                key={feature.id}
+                index={index}
+                isFeature={true}
+              />
+            );
           })}
         </div>
       </section>

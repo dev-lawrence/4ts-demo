@@ -32,16 +32,16 @@ const Footer = () => {
         <div className="container">
           <div className="grid">
             <div className="about m-b">
-              <h3>4t5</h3>
+              <Link className="logo" to="/">
+                4t5
+              </Link>
               <p>
                 Say goodbye to missed deadlines and complicated processes. Join
                 thousands of satisfied customers who trust 4T5 for their data,
                 airtime, eletricity and cable TV bill payments.
               </p>
-              <Link to={'/'} className="btn">
-                read more
-              </Link>
             </div>
+
             <div className="quick-menu menu--links m-b">
               <h3>quick link</h3>
               <li>
@@ -66,6 +66,25 @@ const Footer = () => {
 
             <div className="social-links m-b">
               <h3>contact</h3>
+              <div className="flex">
+                <i className="fa-solid fa-user"></i>
+                <p>4T5 NG</p>
+              </div>
+
+              <div className="flex">
+                <i class="fa-solid fa-earth-americas"></i>
+                <p>DELTA STATE, NIGERIA</p>
+              </div>
+
+              <div className="flex">
+                <i className="fa-solid fa-envelope"></i> <p>4T5 NG</p>
+                <p>info.4t5ng@gmail.com</p>
+              </div>
+
+              <div className="flex">
+                <i className="fa-brands fa-instagram"></i>
+                <p>4T5.NG</p>
+              </div>
             </div>
           </div>
           <div className="copyright">
@@ -75,7 +94,7 @@ const Footer = () => {
 
         <div onClick={handleScrollToTop} className="page-up">
           <span className={showScrollArrow ? 'showArrow' : ''}>
-            <i class="fa-solid fa-arrow-up up-icon"></i>
+            <i className="fa-solid fa-arrow-up up-icon"></i>
           </span>
         </div>
       </section>
